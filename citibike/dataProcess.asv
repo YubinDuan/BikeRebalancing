@@ -1,0 +1,3 @@
+stationTable = readtable('201710-citibike-tripdata.csv');
+stationTable = removevars(stationTable,{'tripduration','startStationName','endStationName','bikeid','usertype','birthYear','gender'});
+stationID = unique([table2astationTable(:,3);stationTable(:,6)]);
